@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Uganda palette */
+  --color-ug-dark:         #060A08;
+  --color-ug-night:        #08100A;
+  --color-ug-green:        #1A6B3C;
+  --color-ug-green-light:  #28854C;
+  --color-ug-blue:         #1B5B85;
+  --color-ug-blue-light:   #2A72A8;
+  --color-ug-gold:         #C8A415;
+  --color-ug-red:          #B52929;
+  --color-ug-sand:         #E8D8B8;
+  --color-ug-cream:        #F5EDE0;
+  --font-serif: var(--font-playfair);
+  --font-sans:  var(--font-inter);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #060A08;
+  color: #E8D8B8;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(26, 107, 60, 0.35);
+  color: #F5EDE0;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #060A08; }
+::-webkit-scrollbar-thumb { background: #1A6B3C; border-radius: 3px; }
