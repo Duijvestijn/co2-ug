@@ -3,11 +3,12 @@
  * Source: Unsplash
  */
 
+const HF = "https://d8j0ntlcm91z4.cloudfront.net/user_3E7JAVPwA7DZLNJSwAYUmbE0qfD";
 const UNS = "https://images.unsplash.com";
 
 export const IMAGES = {
-  /** Hero: African savanna at golden hour */
-  hero: `${UNS}/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=2400&q=85`,
+  /** Hero: Bwindi rainforest Uganda — Higgsfield soul_location */
+  hero: `${HF}/hf_20260528_230746_80bf0865-fe80-432e-a4ce-5c4b8329af91.png`,
 
   /** Dense rainforest — Bwindi */
   bwindi: `${UNS}/photo-1448375240586-882707db888b?auto=format&fit=crop&w=2400&q=85`,
