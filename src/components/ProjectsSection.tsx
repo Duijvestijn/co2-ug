@@ -25,47 +25,47 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="bg-ug-night py-24 md:py-32">
+    <section id="projects" className="bg-ug-page py-24 md:py-32">
       <div ref={ref} className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-14">
           <motion.div variants={FU(0)} initial="hidden" animate={inView ? "visible" : "hidden"}>
             <div className="inline-flex items-center gap-2 mb-4">
-              <span className="w-6 h-px bg-ug-green/50" />
-              <span className="text-xs tracking-[0.25em] uppercase text-ug-green/80 font-medium">{t.label}</span>
-              <span className="w-6 h-px bg-ug-green/50" />
+              <span className="w-6 h-px bg-ug-green" />
+              <span className="text-xs tracking-[0.25em] uppercase text-ug-green font-semibold">{t.label}</span>
+              <span className="w-6 h-px bg-ug-green" />
             </div>
           </motion.div>
           <motion.h2 variants={FU(0.08)} initial="hidden" animate={inView ? "visible" : "hidden"}
-            className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">
+            className="font-serif text-5xl md:text-6xl font-bold text-ug-ink mb-4 leading-tight">
             {t.title}
           </motion.h2>
           <motion.p variants={FU(0.14)} initial="hidden" animate={inView ? "visible" : "hidden"}
-            className="text-ug-sand/55 leading-relaxed">
+            className="text-ug-muted leading-relaxed">
             {t.subtitle}
           </motion.p>
         </div>
 
         {/* Project grid */}
-        <div className="grid sm:grid-cols-2 gap-5">
+        <div className="grid sm:grid-cols-2 gap-6">
           {projects.map((p, i) => (
             <motion.div key={i} variants={FU(i * 0.1)} initial="hidden" animate={inView ? "visible" : "hidden"}
-              className="group rounded-3xl overflow-hidden bg-ug-dark border border-white/[0.05] hover:border-ug-green/25 transition-all">
-              {/* Image */}
-              <div className="relative h-48 overflow-hidden">
+              className="group rounded-2xl overflow-hidden bg-white shadow-sm border border-black/[0.06] hover:shadow-xl transition-all">
+              {/* Image — h-72 */}
+              <div className="relative h-72 overflow-hidden">
                 <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                   style={{ backgroundImage: `url(${PROJECT_IMAGES[i]})` }} />
-                <div className="absolute inset-0 bg-gradient-to-t from-ug-dark via-ug-dark/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ug-dark/60 via-ug-dark/10 to-transparent" />
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 rounded-full bg-ug-green/90 text-white text-[10px] font-bold tracking-wide uppercase">
+                  <span className="px-3 py-1.5 rounded-full bg-ug-green text-white text-[10px] font-bold tracking-wide uppercase">
                     {p.tag}
                   </span>
                 </div>
               </div>
               {/* Content */}
               <div className="p-6">
-                <h3 className="font-serif text-xl font-bold text-white mb-3 group-hover:text-ug-green transition-colors">{p.title}</h3>
-                <p className="text-ug-sand/50 text-sm leading-relaxed">{p.desc}</p>
+                <h3 className="font-serif text-xl font-bold text-ug-ink mb-3 group-hover:text-ug-green transition-colors">{p.title}</h3>
+                <p className="text-ug-muted text-sm leading-relaxed">{p.desc}</p>
               </div>
             </motion.div>
           ))}

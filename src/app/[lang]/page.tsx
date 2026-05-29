@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
+import ImpactStatsBar from "@/components/ImpactStatsBar";
 import WhatIsSection from "@/components/WhatIsSection";
 import WhyUgandaSection from "@/components/WhyUgandaSection";
 import StandardsSection from "@/components/StandardsSection";
@@ -21,6 +22,7 @@ export default async function LangPage({ params }: { params: Promise<{ lang: str
       <Header />
       <main>
         <HeroSection />
+        <ImpactStatsBar />
         <WhatIsSection />
         <WhyUgandaSection />
         <StandardsSection />

@@ -4,14 +4,19 @@
   /* Uganda palette */
   --color-ug-dark:         #060A08;
   --color-ug-night:        #08100A;
-  --color-ug-green:        #1A6B3C;
-  --color-ug-green-light:  #28854C;
+  --color-ug-green:        #1B7A42;
+  --color-ug-green-light:  #25994F;
   --color-ug-blue:         #1B5B85;
   --color-ug-blue-light:   #2A72A8;
   --color-ug-gold:         #C8A415;
   --color-ug-red:          #B52929;
   --color-ug-sand:         #E8D8B8;
   --color-ug-cream:        #F5EDE0;
+  /* Light mode palette */
+  --color-ug-page:         #F3F5F0;
+  --color-ug-stone:        #E8ECE5;
+  --color-ug-ink:          #191C17;
+  --color-ug-muted:        #565952;
   --font-serif: var(--font-playfair);
   --font-sans:  var(--font-inter);
 }
@@ -19,8 +24,8 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background-color: #060A08;
-  color: #E8D8B8;
+  background-color: #F3F5F0;
+  color: #191C17;
   font-family: var(--font-inter), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -28,10 +33,10 @@ body {
 }
 
 ::selection {
-  background: rgba(26, 107, 60, 0.35);
-  color: #F5EDE0;
+  background: rgba(27, 122, 66, 0.25);
+  color: #191C17;
 }
 
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #060A08; }
-::-webkit-scrollbar-thumb { background: #1A6B3C; border-radius: 3px; }
+::-webkit-scrollbar-track { background: #F3F5F0; }
+::-webkit-scrollbar-thumb { background: #1B7A42; border-radius: 3px; }
