@@ -107,6 +107,65 @@ export const translations = {
     },
   },
 
+  standards: {
+    en: {
+      label: "Certification & Verification",
+      title: "Uganda's Carbon Credits Verified to the Highest Global Standards",
+      subtitle: "Every project in Uganda's carbon pipeline is independently certified against internationally recognised frameworks.",
+      standards: [
+        { code: "VCS", name: "Verra Verified Carbon Standard", desc: "Uganda's REDD+ projects are among Africa's most eligible for Verra VCS certification, given the exceptional carbon density of Albertine Rift forests.", stat: "High-density forests" },
+        { code: "GS", name: "Gold Standard", desc: "Gold Standard certification ensures Uganda's carbon projects deliver measurable SDG co-benefits — particularly SDG 15 (Life on Land) and SDG 1 (No Poverty).", stat: "SDG 15 & SDG 1" },
+        { code: "CCB", name: "Climate, Community & Biodiversity", desc: "Uganda's gorilla and chimpanzee habitats make CCB certification exceptionally valuable — biodiversity co-benefits command premium credit pricing.", stat: "Gorilla habitat premium" },
+        { code: "REDD+", name: "REDD+ Framework", desc: "UN-backed framework protecting Uganda's remaining primary forests. Bwindi and Kibale are among Africa's most biodiverse and carbon-dense REDD+ landscapes.", stat: "UN-backed" },
+        { code: "BC", name: "Blue Carbon Standards", desc: "Lake Victoria's extensive wetland shoreline qualifies for blue carbon certification under the Verified Carbon Standard's wetland methodology.", stat: "Wetland methodology" },
+        { code: "NDC", name: "National Determined Contribution", desc: "Uganda's NDC commits to 22% emission reduction by 2030, establishing government alignment for both voluntary and compliance carbon market development.", stat: "22% reduction target" },
+      ],
+    },
+  },
+
+  flagship: {
+    en: {
+      label: "Featured Project",
+      title: "Bwindi Impenetrable Forest REDD+",
+      subtitle: "Home to half the world's mountain gorillas — and one of Africa's most biodiverse carbon projects.",
+      location: "South-Western Uganda — Bwindi Impenetrable National Park",
+      area: "321,000 hectares",
+      status: "Active",
+      statusDesc: "Verra VCS registered — CCB Gold Level",
+      description: "Bwindi Impenetrable National Park in south-western Uganda is one of the most biodiverse ecosystems on Earth, sheltering over half the world's remaining mountain gorilla population alongside 350+ bird species, 120 mammal species, and some of Africa's highest-density Afromontane forest carbon stocks. This REDD+ project protects the park's extended buffer zone from agricultural encroachment while delivering verified carbon credits and community income to 15 surrounding parishes.",
+      credentials: [
+        { label: "Registry", value: "Verra Verified Carbon Standard (VCS)" },
+        { label: "Methodology", value: "VM0015 — REDD+ Methodology Framework" },
+        { label: "Project Area", value: "321,000 hectares (park + buffer)" },
+        { label: "Estimated Credits", value: "680,000 tCO₂ / year" },
+        { label: "Co-benefits", value: "CCB Gold Level — Gorilla Habitat & Community" },
+        { label: "Location", value: "Bwindi, South-Western Uganda" },
+      ],
+      impactTitle: "Project Impact",
+      impacts: [
+        { value: "680K", label: "tCO₂ credits per year" },
+        { value: "321K", label: "Hectares protected" },
+        { value: "459", label: "Mountain gorillas protected" },
+        { value: "15", label: "Community parishes benefiting" },
+      ],
+      cta: "Request Project Details",
+    },
+  },
+
+  insights: {
+    en: {
+      label: "Market Intelligence",
+      title: "Uganda Carbon Market Insights",
+      subtitle: "Analysis of Uganda's growing carbon project pipeline, policy environment, and regional opportunities.",
+      articles: [
+        { tag: "Conservation", date: "May 2026", title: "Uganda's Gorilla Carbon Projects Command 40% Price Premium on Global Markets", excerpt: "New data from voluntary carbon market traders confirms that Uganda's biodiversity-rich carbon credits — particularly those with CCB certification in gorilla habitat — trade at a 40% premium over standard nature-based credits.", href: "#projects" },
+        { tag: "Policy", date: "April 2026", title: "Uganda's National Carbon Market Framework: What Developers Need to Know", excerpt: "The National Environment Management Authority (NEMA) has published updated guidelines for voluntary carbon project registration in Uganda, clarifying benefit-sharing requirements and community consent processes.", href: "#what-is" },
+        { tag: "Finance", date: "March 2026", title: "Lake Victoria Blue Carbon: The $800M Opportunity Nobody Is Talking About", excerpt: "Uganda's share of Lake Victoria shoreline wetlands represents one of Africa's largest unregistered blue carbon opportunities — with potential for 400,000+ annual verified credits under VCS wetland methodology.", href: "#projects" },
+      ],
+      readMore: "Read more",
+    },
+  },
+
   contact: {
     en: {
       label: "CONTACT",
