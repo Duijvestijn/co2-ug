@@ -20,7 +20,7 @@ export default function Footer() {
             </div>
             <div className="text-ug-green/70 text-xs tracking-widest mb-4">{t.tagline}</div>
             <p className="text-white/30 text-xs leading-relaxed max-w-xs">
-              This platform is for informational purposes only. Carbon markets involve risks. Consult independent advisors before making investment decisions.
+              This platform is for informational purposes only. Carbon markets involve risks. Consult independent financial and legal advisors before making investment decisions.
             </p>
           </div>
 
@@ -32,6 +32,7 @@ export default function Footer() {
                 { label: nav.credits, href: "#what-is" },
                 { label: nav.why, href: "#why-uganda" },
                 { label: nav.projects, href: "#projects" },
+                { label: nav.insights, href: `/${lang}/insights` },
                 { label: nav.contact, href: "#contact" },
               ].map(({ label, href }) => (
                 <li key={href}>

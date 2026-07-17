@@ -40,3 +40,15 @@ body {
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: #F3F5F0; }
 ::-webkit-scrollbar-thumb { background: #1B7A42; border-radius: 3px; }
+
+.prose-ug { color: #191C17; line-height: 1.8; font-size: 1.0625rem; }
+.prose-ug p { margin-bottom: 1.5rem; }
+.prose-ug p.lead { font-size: 1.2rem; line-height: 1.7; color: #3a3d38; margin-bottom: 2rem; font-weight: 400; }
+.prose-ug h2 { font-family: var(--font-playfair), Georgia, serif; font-size: 1.6rem; font-weight: 700; color: #191C17; margin: 2.5rem 0 1rem; line-height: 1.3; }
+.prose-ug h3 { font-family: var(--font-playfair), Georgia, serif; font-size: 1.2rem; font-weight: 700; color: #191C17; margin: 2rem 0 0.75rem; }
+.prose-ug ul, .prose-ug ol { margin: 0 0 1.5rem 1.5rem; }
+.prose-ug li { margin-bottom: 0.5rem; }
+.prose-ug a { color: #1B7A42; text-decoration: underline; text-underline-offset: 3px; }
+.prose-ug a:hover { color: #25994F; }
+.prose-ug strong { font-weight: 600; color: #191C17; }
+.prose-ug blockquote { border-left: 1px solid rgba(27,122,66,0.35); padding-left: 1.25rem; margin: 2rem 0; color: #565952; font-style: italic; }

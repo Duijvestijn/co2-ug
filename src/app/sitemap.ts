@@ -1,21 +1,23 @@
 import type { MetadataRoute } from "next";
+import { getAllSlugs } from "@/lib/articles";
 
 export const dynamic = "force-static";
 
 const BASE = "https://co2.ug";
-const LANGS = ["en"] as const;
-const LAST_MODIFIED = new Date("2026-05-29");
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const slugs = getAllSlugs();
+  const now = new Date();
   const entries: MetadataRoute.Sitemap = [
-    { url: BASE, lastModified: LAST_MODIFIED, changeFrequency: "weekly", priority: 0.5 },
+    { url: `${BASE}/en`, lastModified: now, changeFrequency: "monthly", priority: 1 },
+    { url: `${BASE}/en/insights`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
   ];
-  for (const lang of LANGS) {
+  for (const slug of slugs) {
     entries.push({
-      url: `${BASE}/${lang}`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "weekly",
-      priority: 1.0,
+      url: `${BASE}/en/insights/${slug}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
     });
   }
   return entries;

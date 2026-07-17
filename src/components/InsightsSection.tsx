@@ -49,7 +49,7 @@ export default function InsightsSection() {
           {t.articles.map((article, i) => (
             <motion.a
               key={i}
-              href={article.href}
+              href={article.href.startsWith("/insights") ? `/${lang}${article.href}` : article.href}
               variants={FU(i * 0.1)}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}

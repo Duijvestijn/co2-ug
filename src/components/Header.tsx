@@ -12,7 +12,16 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 40);
+          ticking = false;
+        });
+      }
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -21,6 +30,7 @@ export default function Header() {
     { label: t.credits, href: "#what-is" },
     { label: t.why, href: "#why-uganda" },
     { label: t.projects, href: "#projects" },
+    { label: t.insights, href: `/${lang}/insights` },
     { label: t.contact, href: "#contact" },
   ];
 
