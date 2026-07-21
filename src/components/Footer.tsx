@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="bg-ug-dark border-t border-white/[0.06] pt-14 pb-8">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-10 mb-10">
+        <div className="grid md:grid-cols-4 gap-10 mb-10">
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="font-serif font-bold text-xl leading-none tracking-tight mb-2">
@@ -55,6 +55,33 @@ export default function Footer() {
                 <li key={label}>
                   <a href={href} target="_blank" rel="noopener noreferrer"
                     className="text-white/40 hover:text-ug-green text-sm transition-colors">{label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* Network */}
+          <div>
+            <h4 className="text-white/60 text-xs font-semibold tracking-[0.15em] uppercase mb-4">
+              Network
+            </h4>
+            <ul className="space-y-2">
+              {[
+                { label: "CO2.ke", href: "https://co2.ke" },
+                { label: "CO2.africa", href: "https://co2.africa" },
+                { label: "CO2.ug", href: "https://co2.ug" },
+                { label: "CO2.cm", href: "https://co2.cm" },
+                { label: "biodiversity.ae", href: "https://biodiversity.ae" },
+                { label: "carboncredits.kz", href: "https://carboncredits.kz" },
+              ].filter(l => l.href !== "https://co2.ug").map(({ label, href }) => (
+                <li key={href}>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/40 hover:text-ug-green text-sm transition-colors"
+                  >
+                    {label}
+                  </a>
                 </li>
               ))}
             </ul>

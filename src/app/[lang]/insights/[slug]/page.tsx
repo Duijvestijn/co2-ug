@@ -89,6 +89,20 @@ export default async function ArticlePage({
     <>
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: `${BASE}/${lang}` },
+              { "@type": "ListItem", position: 2, name: "Insights", item: `${BASE}/${lang}/insights` },
+              { "@type": "ListItem", position: 3, name: article.title.en, item: `${BASE}/${lang}/insights/${slug}` },
+            ],
+          }).replace(/</g, "\\u003c"),
+        }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd).replace(/</g, "\\u003c") }}
       />
       <Header />
