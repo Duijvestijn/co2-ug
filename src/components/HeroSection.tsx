@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { useLang } from "@/lib/LangContext";
 import { translations } from "@/lib/translations";
 import { IMAGES } from "@/lib/images";
@@ -17,26 +16,20 @@ const FADE_UP = {
 export default function HeroSection() {
   const { lang } = useLang();
   const t = translations.hero[lang];
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start start", "end start"] });
-  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   return (
-    <section ref={containerRef} id="hero" className="relative min-h-screen flex flex-col justify-end overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex flex-col justify-end overflow-hidden">
       {/* Background */}
-      <motion.div style={{ y: bgY }} className="absolute inset-0 scale-110">
+      <div className="absolute inset-0">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${IMAGES.hero})` }} />
         {/* Left-heavy gradient for text legibility */}
         <div className="absolute inset-0 bg-gradient-to-r from-ug-dark/90 via-ug-dark/60 to-ug-dark/20" />
         {/* Bottom gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-ug-dark/80 via-transparent to-ug-dark/30" />
-      </motion.div>
+      </div>
 
       {/* Content — bottom-left */}
-      <motion.div style={{ y: textY, opacity }} className="relative z-10 max-w-6xl mx-auto px-6 w-full pb-24 pt-32">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 w-full pb-24 pt-32">
         <div className="max-w-3xl">
           {/* Label */}
           <motion.div custom={0} variants={FADE_UP} initial="hidden" animate="visible" className="flex items-center gap-2 mb-8">
@@ -45,7 +38,7 @@ export default function HeroSection() {
           </motion.div>
 
           {/* Title */}
-          <motion.h1 custom={1} variants={FADE_UP} initial="hidden" animate="visible"
+          <motion.h1 custom={1} variants={FADE_UP} initial={{ opacity: 1, y: 0 }} animate="visible"
             className="font-serif text-6xl sm:text-7xl md:text-8xl font-bold leading-[1.0] text-white mb-3">
             {t.titleLine1}
           </motion.h1>
@@ -81,7 +74,7 @@ export default function HeroSection() {
           <motion.div animate={{ y: [0, 6, 0] }} transition={{ repeat: Infinity, duration: 2 }}
             className="w-px h-8 bg-gradient-to-b from-ug-green/50 to-transparent" />
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 }

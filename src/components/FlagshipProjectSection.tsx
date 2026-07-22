@@ -70,7 +70,7 @@ export default function FlagshipProjectSection() {
             </motion.div>
 
             {/* CTA */}
-            <motion.div variants={FU(0.32)} initial="hidden" animate={inView ? "visible" : "hidden"}>
+            <motion.div variants={FU(0.32)} initial="hidden" animate={inView ? "visible" : "hidden"} className="flex flex-col">
               <a href="#contact"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-ug-green hover:bg-ug-green-light text-white font-bold text-sm transition-colors shadow-lg shadow-ug-green/20">
                 {t.cta}
@@ -78,6 +78,13 @@ export default function FlagshipProjectSection() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </a>
+              {t.registryUrl && (
+                <motion.a variants={FU(0.38)} initial="hidden" animate={inView ? "visible" : "hidden"}
+                  href={t.registryUrl} target="_blank" rel="noopener noreferrer"
+                  className="self-start mt-3 text-xs text-white/50 hover:text-ug-green flex items-center gap-1 transition-colors">
+                  {t.registryLabel}
+                </motion.a>
+              )}
             </motion.div>
           </div>
 

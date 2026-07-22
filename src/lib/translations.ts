@@ -203,6 +203,20 @@ export const translations = {
     },
   },
 
+  faq: {
+    en: {
+      label: "Common Questions",
+      title: "Understanding Uganda's Carbon Market",
+      items: [
+        { q: "What makes Uganda's carbon credits unique?", a: "Uganda's carbon projects are among the most biodiversity-rich in the world. Projects in gorilla and chimpanzee habitat carry CCB (Climate, Community and Biodiversity) certification, which commands a 30–40% price premium over standard credits because buyers receive verified biodiversity co-benefits alongside the carbon unit." },
+        { q: "What is the National Environment Management Authority's role?", a: "NEMA is Uganda's regulatory body for voluntary carbon project registration. Projects must obtain NEMA approval, demonstrate free prior informed consent (FPIC) from affected communities, and commit to minimum 30% community benefit sharing before credits can be issued under international standards." },
+        { q: "Which certification standards operate in Uganda?", a: "Uganda's carbon projects are primarily certified under Verra's Verified Carbon Standard (VCS) and the Climate, Community and Biodiversity (CCB) standard. Gold Standard is also used for cookstove and energy projects. NEMA registration is required alongside international certification." },
+        { q: "What is the Lake Victoria blue carbon opportunity?", a: "Uganda's 200+ km of Lake Victoria shoreline holds one of Africa's largest unregistered wetland carbon reserves. Under Verra's VM0033 methodology, papyrus wetland restoration could generate 400,000+ annual verified carbon credits while restoring critical fish nursery habitat." },
+        { q: "How does Green Earth Group work in Uganda?", a: "Green Earth Group supports carbon project development across Uganda's key ecosystems — from Bwindi Impenetrable Forest to the Kibale chimpanzee corridor. We advise on VCS registration, community structuring, and connecting developers with international buyers." },
+      ],
+    },
+  },
+
   about: {
     en: {
       label: "Our Approach",
